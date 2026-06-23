@@ -1,0 +1,27 @@
+meta {
+  name: Atualizar Cliente
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/clientes/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nome": "Maria Souza Lima",
+    "email": "maria.lima@email.com",
+    "telefone": "(54) 98888-1111",
+    "endereco": {
+      "logradouro": "Av. Brasil",
+      "numero": "456",
+      "bairro": "São Pelegrino",
+      "cidade": "Caxias do Sul",
+      "estado": "RS",
+      "cep": "95010-000"
+    }
+  }
+}

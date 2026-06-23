@@ -1,0 +1,16 @@
+meta {
+  name: Listar Pedidos
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/pedidos?page=0&size=10
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 0
+  size: 10
+}

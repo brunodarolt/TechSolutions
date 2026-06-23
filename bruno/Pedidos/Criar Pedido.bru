@@ -1,0 +1,21 @@
+meta {
+  name: Criar Pedido
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/pedidos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clienteId": 1,
+    "itens": [
+      { "produtoId": 1, "quantidade": 2 },
+      { "produtoId": 2, "quantidade": 1 }
+    ]
+  }
+}

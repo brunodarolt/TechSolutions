@@ -1,0 +1,25 @@
+meta {
+  name: Criar Produto Fisico
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/produtos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "tipo": "FISICO",
+    "nome": "Webcam HD",
+    "descricao": "Webcam 720p com microfone",
+    "preco": 199.90,
+    "estoque": 15,
+    "categoriaId": 1,
+    "peso": 0.3,
+    "alturaCm": 5.0,
+    "larguraCm": 8.0
+  }
+}

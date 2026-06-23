@@ -1,0 +1,25 @@
+meta {
+  name: Atualizar Produto
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/produtos/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "tipo": "FISICO",
+    "nome": "Webcam Full HD",
+    "descricao": "Webcam 1080p com microfone",
+    "preco": 249.90,
+    "estoque": 20,
+    "categoriaId": 1,
+    "peso": 0.35,
+    "alturaCm": 5.0,
+    "larguraCm": 8.0
+  }
+}

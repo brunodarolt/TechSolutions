@@ -1,0 +1,32 @@
+meta {
+  name: Listar Produtos (filtros)
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/produtos?nome=&categoriaId=&precoMin=&precoMax=&page=0&size=10&sort=preco,asc
+  body: none
+  auth: none
+}
+
+params:query {
+  nome:
+  categoriaId:
+  precoMin:
+  precoMax:
+  page: 0
+  size: 10
+  sort: preco,asc
+}
+
+docs {
+  # Listagem com filtro + paginação + ordenação
+
+  Todos os filtros são opcionais. Exemplos:
+  - `nome=mouse` — busca por nome (parcial)
+  - `categoriaId=1`
+  - `precoMin=10&precoMax=200`
+  - `sort=preco,desc` ou `sort=nome,asc`
+  - `page` e `size` para paginação
+}

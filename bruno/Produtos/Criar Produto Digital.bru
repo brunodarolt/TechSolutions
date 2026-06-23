@@ -1,0 +1,24 @@
+meta {
+  name: Criar Produto Digital
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/produtos
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "tipo": "DIGITAL",
+    "nome": "E-book Java na Prática",
+    "descricao": "PDF + EPUB",
+    "preco": 49.90,
+    "estoque": 999,
+    "categoriaId": 1,
+    "tamanhoMb": 12.5,
+    "urlDownload": "https://exemplo.com/downloads/ebook-java"
+  }
+}

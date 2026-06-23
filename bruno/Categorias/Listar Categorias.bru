@@ -1,0 +1,17 @@
+meta {
+  name: Listar Categorias
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/categorias?page=0&size=10&sort=nome,asc
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 0
+  size: 10
+  sort: nome,asc
+}

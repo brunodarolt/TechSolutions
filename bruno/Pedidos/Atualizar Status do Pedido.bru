@@ -1,0 +1,27 @@
+meta {
+  name: Atualizar Status do Pedido
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/api/pedidos/1/status
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "status": "PAGO"
+  }
+}
+
+docs {
+  # Status possíveis
+
+  - AGUARDANDO_PAGAMENTO
+  - PAGO
+  - ENVIADO
+  - ENTREGUE
+  - CANCELADO
+}
